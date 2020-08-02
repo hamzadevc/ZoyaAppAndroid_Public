@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/news_feed_header_height" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/v_carrot_left_white_24"
+            android:id="@+id/iv_left"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/v_carrot_right_white_24"
+            android:id="@+id/iv_right"/>
+    </FrameLayout>
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        app:centered="true"
+        app:fillColor="@color/pink"
+        app:footerIndicatorStyle="none"
+        app:radius="4dp"
+        app:strokeColor="@color/pink"
+        app:strokeWidth="1dp" />
+
+</LinearLayout>

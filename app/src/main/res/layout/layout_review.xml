@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:orientation="vertical">
+
+                    <com.erraticsolutions.framework.views.CustomTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="Omer Mujtaba"
+                        android:textColor="@color/gray_txt_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:cfont="@string/font_bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <RatingBar
+                        android:id="@+id/rating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:isIndicator="true"
+                        android:maxHeight="20dp"
+                        android:minHeight="20dp"
+                        android:numStars="5"
+                        android:stepSize="0.25" />
+
+                </LinearLayout>
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:gravity="center|start"-->
+                <!--android:textStyle="bold"-->
+                <!--tools:text="Nama Pasien" />-->
+
+
+            </LinearLayout>
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/dlt_news_feed_profile_txt"
+                android:textColor="@color/gray_txt_dark"
+                android:textSize="14sp"
+                app:cfont="@string/font_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_divider" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

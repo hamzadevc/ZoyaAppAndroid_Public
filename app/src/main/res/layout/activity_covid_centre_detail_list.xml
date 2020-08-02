@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.grappetite.zoya.activities.DoctorDetailListActivity">
+
+        <include layout="@layout/include_toolbar_blue" />
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:id="@+id/tv_city"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_gps"
+            android:drawableLeft="@drawable/ic_gps"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="Select City"
+            android:textColor="@color/blue"
+            android:textSize="16.5sp" />
+
+        <View style="@style/DividerHorizontal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/eachview_doctor_detail" />
+    </LinearLayout>
+
+    <com.grappetite.zoya.views.ConnectionInfoView
+        android:id="@+id/civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>

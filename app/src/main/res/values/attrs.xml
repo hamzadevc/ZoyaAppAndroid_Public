@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HotspotView">
+        <attr name="sub_body_part_name" format="string"/>
+        <attr name="main_body_part_name" format="string"/>
+    </declare-styleable>
+</resources>

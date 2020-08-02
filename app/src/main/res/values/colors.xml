@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_a50">#77ffffff</color>
+    <color name="pink">#f16fa1</color>
+    <color name="pink_a80">#ccf16fa1</color>
+    <color name="blue_directions">#4082f1</color>
+    <color name="blue">#53afbc</color>
+    <color name="blue_txt">#3fa8ba</color>
+    <color name="blue_a50">#7753afbc</color>
+    <color name="blue_a80">#cc53afbc</color>
+    <color name="blue_dark">#207583</color>
+    <color name="blue_fb">#465794</color>
+    <color name="red_google">#f75001</color>
+    <color name="red_calendar">#db6559</color>
+    <color name="red_hotspot">#00cc0000</color>
+    <color name="gray_txt">#9fa2a3</color>
+    <color name="green_txt">#00d593</color>
+    <color name="green_online">#00d593</color>
+    <color name="gray_divider">#d3d4d8</color>
+    <color name="gray_highlight">#eeeaee</color>
+    <color name="gray_txt_dark">#525252</color>
+    <color name="blue_txt_dark">#134ea5</color>
+    <color name="blue_txt_light_4">#4773B8</color>
+    <color name="gray_bg_card">#edeef2</color>
+    <color name="gray_line_card">#dbdbdd</color>
+    <color name="gray_offline">#9fa2a3</color>
+    <color name="disclaimer_bg">#F7F1D9</color>
+
+    <color name="purple_white">#f7edf6</color>
+    <color name="blue_symotoms_cover">#60b1ba</color>
+</resources>

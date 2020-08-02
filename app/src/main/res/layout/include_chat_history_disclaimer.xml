@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/s_round_disclaimer"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Disclaimer"
+            android:textColor="@color/gray_txt_dark"
+            android:textSize="14sp"
+            app:cfont="@string/font_regular" />
+
+        <!--<com.erraticsolutions.framework.views.CustomTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="This chat is confidential between you and the expert. If you are resuming your chat session, the expert will have access to this chat history. However, none of its contents will be shared with any other third party by Zoya."-->
+            <!--android:textColor="@color/gray_txt_dark"-->
+            <!--android:textSize="11sp"-->
+            <!--app:cfont="@string/font_regular" />-->
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="You are now Anonymous! Expert can neither see your name, nor your profile picture. This chat is confidential between you and the expert. However, none of its contents will be shared with any other third party by Zoya."
+            android:textColor="@color/gray_txt_dark"
+            android:textSize="11sp"
+            app:cfont="@string/font_regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_below="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ll_top"
+        android:layout_alignLeft="@+id/ll_top"
+        android:layout_alignRight="@+id/ll_top"
+        android:layout_alignStart="@+id/ll_top"
+        android:layout_marginTop="5dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_yes"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/s_round_blue"
+            android:minHeight="30dp"
+            android:text="OK"
+            android:textColor="@android:color/white" />
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_no"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/s_round_blue"
+            android:minHeight="30dp"
+            android:text="NO"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>

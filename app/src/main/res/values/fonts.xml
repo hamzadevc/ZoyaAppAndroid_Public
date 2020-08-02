@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<string name="font_bold">fonts/OpenSans-Bold.ttf</string>-->
+    <!--<string name="font_semiBold">fonts/OpenSans-Semibold.ttf</string>-->
+    <!--<string name="font_regular">fonts/OpenSans-Regular.ttf</string>-->
+    <!--<string name="font_light">fonts/OpenSans-Light.ttf</string>-->
+    <string name="font_bold">fonts/Nunito-Bold.ttf</string>
+    <string name="font_semiBold">fonts/Nunito-SemiBold.ttf</string>
+    <string name="font_regular">fonts/Nunito-Regular.ttf</string>
+    <string name="font_light">fonts/Nunito-Light.ttf</string>
+</resources>

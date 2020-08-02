@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/s_round_disclaimer"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="*DISCLAIMER:\nThe information contained herein should NOT be used as a  substitute for the advice of an appropriately qualified and licensed physician or other health care provider. The information provided here is for informational purposes only.\n\nPlease go to the Finder to find a health care provider in your location.\n\nClick here to view our full"
+            android:textColor="@color/gray_txt_dark"
+            android:textSize="14sp"
+            app:cfont="@string/font_regular" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_terms_and_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="terms and conditions"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                app:cfont="@string/font_regular" />
+            <View android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/blue"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

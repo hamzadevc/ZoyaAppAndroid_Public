@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body_part_hotspot_container"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_body_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/temp_male_torso_right" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_left_chest"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="80dp"
+            app:main_body_part_name="Chest"
+            app:sub_body_part_name="Lateral Chest"/>
+
+    </RelativeLayout>
+</FrameLayout>

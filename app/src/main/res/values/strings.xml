@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Zoya</string>
+    <string name="close">close</string>
+    <string name="open">open</string>
+    <string name="day">day</string>
+    <string name="month">month</string>
+    <string name="year">year</string>
+    <string name="internet_connection_fail">Internet connection fail</string>
+    <string name="google_map_api_key">AIzaSyBXz4aC39bBIyqdzsLyLIA9dJtlyVK1aQE</string>
+
+    <string name="dlt_news_feed_detail_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas pharetra est, et sollicitudin justo vulputate nec. Fusce auctor erat enim, eu porttitor sapien pretium non. Ut sollicitudin fermentum felis, ut egestas mauris tempus sit amet. Quisque convallis sodales molestie.
+\n\nCras eu leo orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer molestie ligula quam, id tempus dui porta in. Aliquam mi justo, rhoncus non ullamcorper a, condimentum non tellus. Nullam tincidunt feugiat nisl, ut dignissim urna iaculis sit amet. Donec ultrices, metus nec hendrerit laoreet, urna erat dignissim ante, non semper nisl lacus tincidunt felis.
+\n\nDonec vitae feugiat mauris. Fusce enim libero, sodales sed ultricies vel, vulputate ac elit. Donec non nisl nulla. Suspendisse eget diam pulvinar, malesuada turpis ut, rhoncus purus. Donec sit amet tellus ultricies magna porta convallis. Integer at massa nec odio posuere rutrum. Nullam pulvinar tellus at risus tristique mollis. Nullam nec ligula id dui vehicula hendrerit vitae at lacus.
+    </string>
+    <string name="dlt_news_feed_profile_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas pharetra est, et sollicitudin justo vulputate nec.</string>
+
+    <string-array name="languages">
+        <item>Urdu</item>
+        <item>English</item>
+        <item>Saraiki</item>
+        <item>Pushtu</item>
+        <item>Punjabi</item>
+        <item>Dari</item>
+    </string-array>
+
+
+    <string name="name" />
+    <string name="email" />
+    <string name="password" />
+
+    <string name="permission_camera_rational">We need permission to capture Image from Camera. Please go to settings and allow <b>Camera</b> permission</string>
+    <string name="permission_storage_rational">We need permission to get Camera or Gallery Image of your device. Please go to settings and allow <b>Storage</b> permission</string>
+    <string name="youtube_apikey">AIzaSyDOSFfG8p4fm3xsTRX5Dk-3gTr6-GCtaAI</string>
+    <string name="facebook_app_id">1927943484122171</string>
+    <string name="fb_login_protocol_scheme">fb1927943484122171</string>
+
+    <string name="view_type">view_type</string>
+    <string name="gender">gender</string>
+</resources>

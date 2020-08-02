@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.PromoCodeActivity">
+
+        <include layout="@layout/include_toolbar_blue" />
+
+        <com.erraticsolutions.framework.views.CustomEditText
+            android:id="@+id/et_promo"
+            style="@style/EditText.Login.SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="REFERRALCODE"
+            android:inputType="textCapCharacters" />
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:id="@+id/tv_promo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Enter the referral code provided to you by one of the ambassadors"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="13sp"
+            app:cfont="@string/font_semiBold" />
+
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_promo"
+            style="@style/Button.Login.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/s_round_blue"
+            android:paddingEnd="30dp"
+            android:paddingLeft="27dp"
+            android:paddingRight="30dp"
+            android:paddingStart="27dp"
+            android:text="Apply" />
+    </LinearLayout>
+
+    <com.grappetite.zoya.views.ConnectionInfoView
+        android:id="@+id/civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>

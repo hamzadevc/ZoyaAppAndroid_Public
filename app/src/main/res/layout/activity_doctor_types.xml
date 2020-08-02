@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.grappetite.zoya.activities.FinderPlacesTypesActivity">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb"
+        android:orientation="vertical">
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:textSize="16.5sp"
+            android:drawableLeft="@drawable/ic_gps"
+            android:drawableStart="@drawable/ic_gps"
+            android:drawablePadding="10dp"
+            android:text="Select City"
+            android:textColor="@color/blue"
+            android:id="@+id/tv_city"/>
+        <com.erraticsolutions.framework.views.CustomTextView
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/gray_txt"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:text="What are you looking for?"/>
+
+        <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/eachview_doctor_type"
+            app:setIndexBarColor="#00000000" />
+    </LinearLayout>
+
+    <com.grappetite.zoya.views.ConnectionInfoView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/civ"/>
+</RelativeLayout>

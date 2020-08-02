@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.PeriodTrackerEditActivity">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:text="When did your last period start?"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        app:cfont="@string/font_semiBold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/s_round_stroke_blue_transparent_thin"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:id="@+id/ll_date">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/calendar_pink" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01"
+            android:textColor="@color/pink"
+            android:textSize="13sp"
+            app:cfont="@string/font_regular"
+            android:id="@+id/tv_day"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TUESDAY"
+            android:textColor="@color/pink"
+            android:textSize="13sp"
+            app:cfont="@string/font_regular"
+            android:id="@+id/tv_week_day"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEPTEMBER"
+            android:textColor="@color/pink"
+            android:textSize="13sp"
+            app:cfont="@string/font_regular"
+            android:id="@+id/tv_month"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/v_carrot_down_blue_24" />
+    </LinearLayout>
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:text="How many days did your period last?"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        app:cfont="@string/font_semiBold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/s_round_stroke_blue_transparent_thin">
+        <com.erraticsolutions.framework.views.CustomTextView
+            app:cfont="@string/font_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="-"
+            android:id="@+id/tv_minus_period_last"/>
+        <View style="@style/DividerVertical.Blue"/>
+        <com.erraticsolutions.framework.views.CustomTextView
+            app:cfont="@string/font_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink"
+            android:textSize="22.5sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="01"
+            android:id="@+id/tv_period_last"/>
+        <View style="@style/DividerVertical.Blue"/>
+        <com.erraticsolutions.framework.views.CustomTextView
+            app:cfont="@string/font_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="+"
+            android:id="@+id/tv_plus_period_last"/>
+    </LinearLayout>
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/customTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:text="How long is your menstrual cycle?"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        app:cfont="@string/font_semiBold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/s_round_stroke_blue_transparent_thin">
+        <com.erraticsolutions.framework.views.CustomTextView
+            app:cfont="@string/font_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="-"
+            android:id="@+id/tv_minus_menstrual_cycle"/>
+        <View style="@style/DividerVertical.Blue"/>
+        <com.erraticsolutions.framework.views.CustomTextView
+            app:cfont="@string/font_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink"
+            android:textSize="22.5sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="01"
+            android:id="@+id/tv_menstrual_cycle"/>
+        <View style="@style/DividerVertical.Blue"/>
+        <com.erraticsolutions.framework.views.CustomTextView
+            app:cfont="@string/font_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="+"
+            android:id="@+id/tv_plus_menstrual_cycle"/>
+    </LinearLayout>
+
+    <com.erraticsolutions.framework.views.CustomButton
+        android:id="@+id/btn_track_it"
+        style="@style/Button.Login.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/s_round_pink"
+        android:drawableLeft="@drawable/ic_track"
+        android:drawableStart="@drawable/ic_track"
+        android:paddingEnd="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="25dp"
+        android:paddingStart="20dp"
+        android:text="Track It" />
+
+</LinearLayout>

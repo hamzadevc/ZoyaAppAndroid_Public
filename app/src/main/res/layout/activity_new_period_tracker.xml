@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.NewPeriodTrackerActivity">
+
+    <include layout="@layout/include_toolbar_blue" />
+
+    
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <com.applandeo.materialcalendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:daysLabelsColor="@color/colorPrimary"
+                app:eventsEnabled="true"
+                app:forwardButtonSrc="@drawable/v_carrot_right_blue_24"
+                app:previousButtonSrc="@drawable/v_carrot_left_blue_24"
+                app:todayLabelColor="@color/pink"
+                app:type="classic" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:layout_below="@+id/calendarView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.erraticsolutions.framework.views.CustomTextView
+                            android:id="@+id/tv_days_remaining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="22.5sp"
+                            android:visibility="visible"
+                            app:cfont="@string/font_semiBold"
+                            tools:text="Next Period in 05 Days." />
+
+                        <com.erraticsolutions.framework.views.CustomButton
+                            android:id="@+id/showCalender"
+                            style="@style/Button.Login.Normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/s_round_pink"
+                            android:paddingEnd="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Edit date" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@string/font_semiBold"
+                            android:text="Period Day"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/blood" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@string/font_semiBold"
+                            android:text="Ovulation Day  "
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ovulation" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

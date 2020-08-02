@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.SymptomsStep1Activity">
+
+    <include layout="@layout/include_toolbar_blue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/r_ll_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.SymptomsTitle.Pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STEP 2" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.SymptomsTitle.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the individual Body Part" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_fill_pink" />
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_gender"
+            style="@style/Button.Login.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r_ll_steps"
+            android:background="@drawable/s_round_blue"
+            android:minWidth="100dp"
+            android:text="Male" />
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_view_type"
+            style="@style/Button.Login.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/r_ll_steps"
+            android:background="@drawable/s_round_blue"
+            android:minWidth="100dp"
+            android:text="Back view" />
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:visibility="gone"
+            android:id="@+id/btn_side_view"
+            style="@style/Button.Login.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_view_type"
+            android:background="@drawable/s_round_blue"
+            android:layout_marginTop="10dp"
+            android:minWidth="100dp"
+            android:text="Side View"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btn_gender"
+            android:id="@+id/fl_body_parts"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/black"
+    tools:context="me.crosswall.photo.pick.PickPhotosActiviy">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@id/photo_footer"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#50000000"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@id/btn_category"
+            android:layout_centerVertical="true"
+            android:textColor="#CDCECE"
+            tools:text="@string/all_photo"
+            android:textSize="16sp"
+            android:gravity="left|center"
+            android:minWidth="100dp"
+            android:maxWidth="160dp"
+            android:drawableRight="@drawable/text_indicator"
+            android:drawablePadding="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_toLeftOf="@id/preview"
+            android:layout_width="1dp"
+            android:background="#8828292A"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@id/preview"
+            tools:text="@string/previews"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minHeight="1dp"
+            android:minWidth="1dp"
+            android:background="@null"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

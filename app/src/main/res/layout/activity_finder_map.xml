@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.FinderMapActivity">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/tv_city"
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_gps"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_gps"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="10dp"
+        android:text="Select City"
+        android:textColor="@color/blue"
+        android:textSize="16.5sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/frag_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center" />
+
+            <com.erraticsolutions.framework.views.CustomButton
+                android:id="@+id/btn_directions"
+                style="@style/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/s_round_blue_directions"
+                android:drawableLeft="@drawable/ic_map_direction"
+                android:drawableStart="@drawable/ic_map_direction"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="15sp"
+                android:text="Directions"
+                android:textColor="@android:color/white"
+                app:cfont="@string/font_semiBold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingStart="30dp"
+                android:paddingTop="10dp">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. Abdul Baki"
+                    android:textColor="@color/blue_txt"
+                    android:textSize="15sp"
+                    app:cfont="@string/font_semiBold" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_specilization"
+                    style="@style/TextView.FinderDesc"
+                    android:layout_marginTop="10dp"
+                    android:text="Dermatologist" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_hospital"
+                    style="@style/TextView.FinderDesc"
+                    android:text="Islamabad Skin Specilist" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_address"
+                    style="@style/TextView.FinderDesc"
+                    android:text="29-30 Taj Mahal Plaza" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_phone_number"
+                    style="@style/TextView.FinderDesc"
+                    android:text="+92313555555" />
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingBottom="10dp"-->
+<!--                android:paddingLeft="30dp"-->
+<!--                android:paddingStart="30dp"-->
+<!--                android:paddingTop="10dp">-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="top|left|center"-->
+<!--                    android:orientation="horizontal">-->
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.erraticsolutions.framework.views.CustomButton-->
+<!--                            android:id="@+id/btn_rating"-->
+<!--                            style="@style/Button"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="start"-->
+<!--                            android:background="@drawable/s_round_blue_directions"-->
+<!--                            android:drawableLeft="@drawable/ic_rating_button"-->
+<!--                            android:drawablePadding="10dp"-->
+<!--                            android:drawableStart="@drawable/ic_rating_button"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:paddingRight="10dp"-->
+<!--                            android:text="Rate this place"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:visibility="invisible"-->
+<!--                            app:cfont="@string/font_semiBold" />-->
+
+
+<!--                        <com.erraticsolutions.framework.views.CustomTextView-->
+<!--                            android:id="@+id/tv_rating_user"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:text="Your rating"-->
+<!--                            android:textColor="@color/blue_txt"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:visibility="invisible"-->
+<!--                            app:cfont="@string/font_semiBold" />-->
+
+<!--                        <RatingBar-->
+<!--                            android:id="@+id/rb_rating_user"-->
+<!--                            style="@style/Widget.AppCompat.RatingBar.Indicator"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:isIndicator="true"-->
+<!--                            android:visibility="invisible" />-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="16dp"-->
+<!--                        android:gravity="end"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.erraticsolutions.framework.views.CustomTextView-->
+<!--                            android:id="@+id/tv_view_all"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="top"-->
+<!--                            android:text="View all"-->
+<!--                            android:textColor="@color/blue_txt"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:visibility="visible"-->
+<!--                            app:cfont="@string/font_semiBold" />-->
+<!--                    </LinearLayout>-->
+
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

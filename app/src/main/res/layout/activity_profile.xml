@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="2dp">
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/dlt_profile_pic_2"/>
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Zoya Khan"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                app:cfont="@string/font_semiBold" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="zoya2000@gmail.com"
+                android:textColor="@color/gray_txt"
+                android:textSize="12sp"
+                app:cfont="@string/font_regular" />
+
+            <com.erraticsolutions.framework.views.CustomButton
+                style="@style/TextView.Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Period Tracker" />
+            <com.erraticsolutions.framework.views.CustomButton
+                style="@style/TextView.Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact" />
+            <com.erraticsolutions.framework.views.CustomButton
+                style="@style/TextView.Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tutorial" />
+            <com.erraticsolutions.framework.views.CustomButton
+                style="@style/TextView.Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign out"
+                android:id="@+id/btn_signout"/>
+            <com.erraticsolutions.framework.views.CustomButton
+                style="@style/TextView.Profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate this app" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

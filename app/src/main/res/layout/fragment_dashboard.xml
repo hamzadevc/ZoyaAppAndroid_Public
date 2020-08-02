@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash"/>
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:layout_gravity="bottom"
+    android:scaleType="centerCrop"
+    android:src="@drawable/scooter_dashboard"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_news_feed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/iv_dashboard_height"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/news_feed_dashboard" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="صحت نامہ"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_symptoms">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/symptoms_dashboard" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="چیک کرو"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_remedies">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/iv_dashboard_height"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/home_remedies_dashboard" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دادی کے ٹوٹکے"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_finder">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="@dimen/iv_dashboard_height"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/finder_dashboard" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تلاش کرو"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:orientation="horizontal">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical"-->
+<!--                android:id="@+id/ll_period_tracker"-->
+<!--                android:clickable="false">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/iv_dashboard_height"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:src="@drawable/period_tracker_dashboard" />-->
+
+<!--                <com.erraticsolutions.framework.views.CustomTextView-->
+<!--                    style="@style/TextView.Dashboard"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Period\nTracker" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical"-->
+<!--                android:id="@+id/ll_ask_expert">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="@dimen/iv_dashboard_height"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:src="@drawable/ask_an_expert_dashboard" />-->
+
+<!--                <com.erraticsolutions.framework.views.CustomTextView-->
+<!--                    style="@style/TextView.Dashboard"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Ask an\nExpert" />-->
+<!--            </LinearLayout>
+
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_contact">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/iv_dashboard_height"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/contact_dashboard" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="رابطہ کرو"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_settings">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/iv_dashboard_height"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/settings_dashboard" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="سیٹنگ"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>  

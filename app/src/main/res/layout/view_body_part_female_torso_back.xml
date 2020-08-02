@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body_part_hotspot_container"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_body_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/temp_female_torso_back" />
+
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_left_back"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="60dp"
+            android:layout_height="220dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            app:main_body_part_name="Back"
+            app:sub_body_part_name="Back" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_right_back"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="60dp"
+            android:layout_height="220dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="50dp"
+            app:main_body_part_name="Back"
+            app:sub_body_part_name="Back" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_upper_spin"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="20dp"
+            android:layout_height="120dp"
+            android:layout_above="@+id/iv_lower_spin"
+            android:layout_centerHorizontal="true"
+            app:main_body_part_name="Back"
+            app:sub_body_part_name="Upper Spine" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_lower_spin"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="20dp"
+            android:layout_height="120dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            app:main_body_part_name="Back"
+            app:sub_body_part_name="Lower Spine" />
+
+    </RelativeLayout>
+
+</FrameLayout>

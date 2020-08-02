@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "165026789322",
+    "firebase_url": "https://zoya-6870a.firebaseio.com",
+    "project_id": "zoya-6870a",
+    "storage_bucket": "zoya-6870a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165026789322:android:0cae644660cd2cbb",
+        "android_client_info": {
+          "package_name": "com.grappetite.zoya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165026789322-ivqqaae0vsn7cfnc1msk2eg90bgvi3f1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.grappetite.zoya",
+            "certificate_hash": "31cc86b89da7af8248140465e874847e208453c3"
+          }
+        },
+        {
+          "client_id": "165026789322-p2vkmfmhu7epjc7bl1ru49her62hlige.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Z5K7vXijPErKAd7zNQHQLQOrV8xIiwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165026789322-p2vkmfmhu7epjc7bl1ru49her62hlige.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "165026789322-t9spkheqvhj269vvjlj7auoupmeo0ool.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grappetite.Zoya",
+                "app_store_id": "1277782569"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

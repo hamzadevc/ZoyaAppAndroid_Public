@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grappetite.zoya">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".application.CustomApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="@string/google_map_api_key" /> -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyChJGRUlY7Hce8Jqq2zPHx1mmVbiHVOBfg" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="me.crosswall.photo.pick.PickPhotosActiviy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.SplashActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity">
+
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SignupActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.NewsFeedActivity" />
+        <activity
+            android:name=".activities.NewsFeedDetailActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.NewFeedCommentsActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.FinderActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.SymptomsStep1Activity">
+
+        </activity>
+        <activity android:name=".activities.SymptomsStep2Activity" />
+        <activity android:name=".activities.SymptomsStep3Activity" />
+        <activity android:name=".activities.SymptomsStep4Activity" />
+        <activity android:name=".activities.SymptomDetailActivity" />
+        <activity android:name=".activities.AskExpertActivity" />
+        <activity
+            android:name=".activities.AskExpertThreadActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activities.RemediesActivity">
+
+        </activity>
+        <activity android:name=".activities.RemedyDetailActivity" />
+        <activity
+            android:name=".activities.ContactActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".activities.PeriodTrackerActivity" />
+        <activity android:name=".activities.PeriodTrackerEditActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".activities.FinderPlacesTypesActivity">
+
+        </activity>
+        <activity android:name=".activities.DoctorTypesActivity" />
+        <activity android:name=".activities.DoctorDetailListActivity" />
+        <activity android:name=".activities.FinderMapActivity" />
+        <activity android:name=".activities.FinderPlacesByTypesActivity" />
+        <activity android:name=".activities.TutorialActivity" />
+
+        <service android:name=".services.TokenService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.PushNotificationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name=".receivers.PeriodAlarmReceiver">
+            <intent-filter>
+                <action android:name="actionPeriodAlarm" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activities.ComingSoon" />
+        <activity android:name=".activities.ExpertChatActivity" />
+        <activity android:name=".activities.ExpertRequestActivity" />
+        <activity android:name=".activities.ExpertChatThreadActivity">
+            <intent-filter>
+                <action android:name="com.grappetite.zoya_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ExpertChatImageActivity" />
+        <activity android:name=".activities.RatingActivity" />
+        <activity android:name=".activities.TestNewsfeedActivity" />
+        <activity android:name=".activities.Test2NewsfeedActivity" />
+        <activity android:name=".activities.NewPeriodTrackerActivity" />
+        <activity android:name=".activities.NewPeriodEditActivity" />
+        <activity android:name=".activities.PromoCodeActivity" />
+        <activity android:name=".covid.CovidSymptomsActivity"></activity>
+        <activity android:name=".covid.CovidSymptomDetailActivity" />
+        <activity android:name=".covid.CovidRemediesActivity">
+
+        </activity>
+        <activity android:name=".covid.CovidRemediesDetailActivity" />
+        <activity android:name=".covid.CovidCentreActivity" />
+        <activity android:name=".covid.CovidCentreMapActivity" />
+    </application>
+
+</manifest>

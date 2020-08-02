@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ExpertChatActivity">
+
+    <include layout="@layout/include_toolbar_blue" />
+
+
+    <RelativeLayout
+        android:id="@+id/r_ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg_card"
+        android:layout_below="@+id/tb">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_pic_placeholder"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mahrukh Zaidi"
+                    android:textColor="@color/blue_txt_dark"
+                    android:textSize="16sp"
+                    app:cfont="@string/font_regular" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_specialization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:text= "Dentest"
+                    android:textColor="@color/gray_txt"
+                    android:textSize="14sp"
+                    app:cfont="@string/font_regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="bottom"
+            android:background="@color/gray_line_card" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Anonymous"
+                android:textColor="@color/gray_txt_dark"
+                android:textSize="10sp"
+                app:cfont="@string/font_regular" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/s_check_anonymous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/r_ll_header"
+        android:layout_above="@+id/layout_message_box"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        tools:listitem="@layout/eachview_ask_expert_received" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout_message_box">
+        <com.erraticsolutions.framework.views.CustomEditText
+            android:id="@+id/et_msg"
+            style="@style/EditText.Login.SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingRight="40dp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:paddingLeft="40dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@drawable/s_round_5_stroke_2_blue_white_enable_disable"
+            android:hint="WRITE A COMMENT"/>
+
+        <ImageView
+            android:id="@+id/iv_post_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="14dp"
+            android:paddingEnd="14dp"
+            android:paddingLeft="14dp"
+            android:paddingStart="14dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_gravity="end|center"
+            android:src="@drawable/v_send_blue_24"/>
+
+        <ImageView
+            android:id="@+id/iv_post_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:paddingBottom="5dp"
+            android:paddingEnd="14dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingStart="14dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_image_button" />
+    </FrameLayout>
+    <com.grappetite.zoya.views.ConnectionInfoView style="@style/ConnectionInfoView"/>
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.SymptomsStep1Activity">
+
+    <include layout="@layout/include_toolbar_blue" />
+
+    <ImageView
+        android:id="@+id/covid_banner"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/symptoms_banner" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/r_ll_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.SymptomsTitle.Pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STEP 1" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.SymptomsTitle.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the Body Part" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_fill_pink" />
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_gender"
+            style="@style/Button.Login.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r_ll_steps"
+            android:background="@drawable/s_round_blue"
+            android:textAllCaps="false"
+            android:minWidth="100dp"
+            android:text="Male" />
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:textAllCaps="false"
+            android:id="@+id/btn_view_type"
+            style="@style/Button.Login.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/r_ll_steps"
+            android:background="@drawable/s_round_blue"
+            android:minWidth="100dp"
+            android:text="Back View" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_next"
+            android:layout_below="@+id/btn_gender"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                style="@style/SymptomsImageView"
+                android:layout_width="35dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_torso"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="52dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_left_arm"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="69dp"
+                    android:layout_marginTop="1.5dp"
+                    android:layout_toEndOf="@id/iv_torso"
+                    android:layout_toRightOf="@id/iv_torso"/>
+
+                <ImageView
+                    android:id="@+id/iv_right_arm"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="69dp"
+                    android:layout_marginTop="1.5dp"
+                    android:layout_toLeftOf="@id/iv_torso"
+                    android:layout_toStartOf="@id/iv_torso"/>
+
+                <ImageView
+                    android:id="@+id/iv_right_hand"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="32.5dp"
+                    android:layout_marginTop="59dp"
+                    android:layout_toLeftOf="@id/iv_right_arm"
+                    android:layout_toStartOf="@id/iv_right_arm"/>
+
+                <ImageView
+                    android:id="@+id/iv_left_hand"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="32.5dp"
+                    android:layout_marginTop="59dp"
+                    android:layout_toEndOf="@id/iv_left_arm"
+                    android:layout_toRightOf="@id/iv_left_arm"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_pelvis"
+                style="@style/SymptomsImageView"
+                android:layout_width="66dp"
+                android:layout_marginTop="-1dp"/>
+
+            <ImageView
+                android:id="@+id/iv_legs"
+                style="@style/SymptomsImageView"
+                android:layout_width="62.5dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_right_foot"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="25dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toLeftOf="@id/r_v_foot"
+                    android:layout_toStartOf="@id/r_v_foot"
+                    android:adjustViewBounds="true"/>
+
+                <View
+                    android:id="@+id/r_v_foot"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/iv_left_foot"
+                    style="@style/SymptomsImageView"
+                    android:layout_width="25dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_toEndOf="@id/r_v_foot"
+                    android:layout_toRightOf="@id/r_v_foot"
+                    android:adjustViewBounds="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

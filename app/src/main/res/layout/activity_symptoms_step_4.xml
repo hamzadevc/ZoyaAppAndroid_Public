@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.SymptomsStep1Activity">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_below="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/r_ll_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.SymptomsTitle.Pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STEP 4" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.SymptomsTitle.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the Symptoms" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_stroke_pink_transparent" />
+                <ImageView
+                    android:layout_width="@dimen/dots_diameter"
+                    android:layout_height="@dimen/dots_diameter"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/s_circle_fill_pink" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Medium.Pink"
+                    app:cfont="@string/font_semiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Your choices"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_your_choices"/>
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Medium.Pink"
+                    app:cfont="@string/font_semiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Possible Conditions" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_your_possible_conditions"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.grappetite.zoya.views.ConnectionInfoView style="@style/ConnectionInfoView"/>
+</RelativeLayout>

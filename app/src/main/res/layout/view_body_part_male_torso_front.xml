@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body_part_hotspot_container"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_body_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/temp_male_torso_front" />
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_marginTop="30dp"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            app:main_body_part_name="Arm"
+            app:sub_body_part_name="Shoulder" />
+        <com.grappetite.zoya.views.HotspotView
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_marginTop="30dp"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            app:main_body_part_name="Arm"
+            app:sub_body_part_name="Shoulder" />
+
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_left_chest"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            app:main_body_part_name="Chest"
+            app:sub_body_part_name="Chest" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_right_chest"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="100dp"
+            app:main_body_part_name="Chest"
+            app:sub_body_part_name="Chest" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_sternum"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            app:main_body_part_name="Chest"
+            app:sub_body_part_name="Sternum" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_uper_abdomen"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_above="@+id/iv_lower_abdomen"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:main_body_part_name="Abdomen"
+            app:sub_body_part_name="Upper Abdomen" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_lower_abdomen"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:main_body_part_name="Abdomen"
+            app:sub_body_part_name="Lower Abdomen" />
+
+    </RelativeLayout>
+
+</FrameLayout>

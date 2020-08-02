@@ -1,0 +1,336 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar" parent="AppTheme">
+        <item name="android:id">@id/tb</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Toolbar.Signup" parent="Toolbar">
+        <item name="android:textColorPrimary">@color/blue</item>
+        <item name="android:textColorSecondary">@color/blue</item>
+    </style>
+
+    <style name="Toolbar.WhiteText" parent="Toolbar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+    <style name="EditText">
+        <item name="cfont">@string/font_regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="EditText.Login" parent="EditText">
+        <item name="android:background">@drawable/s_round_stroke_white_transparent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">30dp</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
+    <style name="EditText.Login.ForgotPassword" parent="EditText.Login">
+        <item name="android:background">@drawable/s_round_stroke_blue_transparent</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textColorHint">@color/blue</item>
+    </style>
+
+    <style name="EditText.Login.SignUp" parent="EditText.Login">
+        <item name="cfont">@string/font_semiBold</item>
+        <item name="android:background">@drawable/s_round_stroke_blue_transparent_thin</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textColorHint">@color/blue</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">00dp</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">00dp</item>
+        <item name="android:layout_marginRight">00dp</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">00dp</item>
+    </style>
+
+    <style name="EditText.Login.SignUp.Finder" parent="EditText.Login.SignUp">
+        <item name="cfont">@string/font_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="EditText.Login.SignUp.Finder.Tags" parent="EditText.Login.SignUp.Finder">
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+
+    <style name="DividerHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gray_divider</item>
+    </style>
+
+    <style name="DividerVertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_divider</item>
+    </style>
+
+    <style name="DividerVertical.Blue" parent="DividerVertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:background">@color/blue</item>
+    </style>
+
+    <style name="TextView">
+        <item name="cfont">@string/font_regular</item>
+    </style>
+
+    <style name="TextView.Blue">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.CalendarRow" parent="TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView.CalendarRow.Days" parent="TextView.CalendarRow">
+        <item name="android:textColor">@color/gray_txt</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.CalendarRow.Date" parent="TextView.CalendarRow">
+        <item name="cfont">@string/font_semiBold</item>
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:textColor">@color/blue_txt</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextView.BlueDarkSymptomsTitle" parent="TextView">
+        <item name="cfont">@string/font_bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/blue_txt_dark</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextView.BlueSymptomsSubTitle" parent="TextView">
+        <item name="cfont">@string/font_semiBold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="TextView.Small" parent="TextView">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.Medium" parent="TextView">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="TextView.SymptomsTitle" parent="TextView">
+        <item name="cfont">@string/font_semiBold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView.Medium.Blue" parent="TextView.Medium">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <style name="TextView.Medium.Pink" parent="TextView.Medium">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+
+    <style name="TextView.Medium.Blue.Symptoms" parent="TextView.Medium.Blue">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="TextView.SymptomsTitle.Pink" parent="TextView.SymptomsTitle">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+
+    <style name="TextView.SymptomsTitle.Gray" parent="TextView.SymptomsTitle">
+        <item name="cfont">@string/font_regular</item>
+        <item name="android:textColor">@color/gray_txt_dark</item>
+    </style>
+
+    <style name="TextView.Login" parent="TextView">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProgressWheel">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="matProg_barWidth">5dp</item>
+        <item name="matProg_barColor">@color/blue</item>
+        <item name="matProg_progressIndeterminate">true</item>
+
+    </style>
+
+    <style name="TextView.SignUpTitle" parent="TextView">
+        <item name="cfont">@string/font_semiBold</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">5dp</item>
+    </style>
+
+    <style name="TextView.Dashboard" parent="TextView">
+        <item name="cfont">@string/font_regular</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="TextView.Tags">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="TextView.Tags.NewsFeedItem" parent="TextView.Tags">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/s_round_stroke_white_transparent_thin</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextView.Tags.NewsFeedDetail" parent="TextView.Tags">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/s_round_stroke_blue_transparent_thin</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="TextView.Tags.Remedies" parent="TextView.Tags">
+        <item name="android:background">@drawable/s_round_5_stroke_2_blue_white</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+    
+    <style name="TextView.FinderDesc" parent="TextView"> 
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/gray_txt</item>
+    </style>
+
+
+    <style name="Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="cfont">@string/font_regular</item>
+        <item name="android:minHeight">40dp</item>
+    </style>
+
+    <style name="Button.PingBG" parent="Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/s_round_pink</item>
+    </style>
+
+
+    <style name="Button.Login" parent="Button">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.Profile" parent="TextView">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="TextView.PingBG" parent="TextView">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/s_round_pink</item>
+    </style>
+
+    <style name="Button.Login.Normal" parent="Button.Login">
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="Button.Login.Social" parent="Button.Login">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">10dp</item>
+    </style>
+
+    <style name="CheckboxBlue" parent="AppTheme">
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="colorControlHighlight">@color/blue</item>
+        <item name="colorControlActivated">@color/blue</item>
+    </style>
+
+    <style name="SwitchGreen" parent="AppTheme">
+        <item name="colorAccent">@color/green_txt</item>
+    </style>
+
+    <style name="ConnectionInfoView">
+        <item name="android:id">@id/v_connection_info</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SymptomsImageView">
+        <item name="android:background">@color/red_hotspot</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SymptomsImageView.StepTwo" parent="SymptomsImageView">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_centerHorizontal">false</item>
+    </style>
+
+    <style name="SymptomsStep2HotSpot">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/red_hotspot</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+</resources>

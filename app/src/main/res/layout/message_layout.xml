@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@drawable/s_round_10_solid_purple_white"
+        android:padding="10dp"
+        android:text="Hello"
+        android:textColor="@color/gray_txt_dark"
+        android:textSize="14sp"
+        app:cfont="@string/font_regular" />
+
+    <ImageView
+        android:id="@+id/iv_message_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/s_round_10_solid_purple_white"
+        android:cropToPadding="true"
+        android:padding="5dp"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

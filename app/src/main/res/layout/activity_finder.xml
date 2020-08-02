@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.FinderActivity">
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                style="@style/EditText.Login.SignUp.Finder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/location"
+                android:text="Islamabad" />
+
+            <com.erraticsolutions.framework.views.CustomEditText
+                style="@style/EditText.Login.SignUp.Finder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/search"
+                android:hint="Search speciality, Doctors, Hospitals"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/EditText.Login.SignUp.Finder.Tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clinics" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/EditText.Login.SignUp.Finder.Tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Saloon" />
+
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/EditText.Login.SignUp.Finder.Tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Gym" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/customTextView"
+                    style="@style/EditText.Login.SignUp.Finder.Tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:text="Hospital" />
+            </LinearLayout>
+
+            <com.erraticsolutions.framework.views.CustomButton
+                style="@style/TextView.Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Search" />
+
+            <fragment
+                android:id="@+id/frag_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

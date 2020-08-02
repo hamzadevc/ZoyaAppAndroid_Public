@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body_part_hotspot_container"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_body_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/temp_female_head_front" />
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="match_parent"
+            android:layout_marginTop="110dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:layout_alignParentTop="true"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Face" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_scalp"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Scalp" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_eyes"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/iv_scalp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="27dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Eye" />
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="20dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/iv_scalp"
+            android:layout_marginTop="15dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Ear" />
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="20dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/iv_scalp"
+            android:layout_marginTop="15dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Ear" />
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/iv_scalp"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="27dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Eye" />
+
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_nose"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/iv_eyes"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Nose" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_mouth"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/iv_nose"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Mouth"/>
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_chin"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/iv_mouth"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Jaw"/>
+
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="150dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:layout_below="@+id/iv_chin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Neck"/>
+
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="70dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:rotation="50"
+            android:layout_marginTop="9dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Jaw"/>
+
+        <com.grappetite.zoya.views.HotspotView
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="70dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:rotation="-50"
+            android:layout_marginTop="9dp"
+            app:main_body_part_name="Head"
+            app:sub_body_part_name="Jaw"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="toolbar" type="id"/>
+    <item name="recyclerview" type="id"/>
+
+    <!--menu action-->
+    <item name="action_finish" type="id"/>
+
+    <!--pick photos-->
+    <item name="photo_footer" type="id"/>
+    <item name="btn_category" type="id"/>
+    <item name="preview" type="id"/>
+    <item name="photo_album_cover"  type="id"/>
+    <item name="photo_album_dis_name"  type="id"/>
+    <item name="photo_album_element_count"  type="id"/>
+    <item name="photo_album_selected"  type="id"/>
+    <item name="photo_thumbview" type="id"/>
+    <item name="photo_thumbview_position" type="id"/>
+    <item name="photo_thumbview_selected" type="id"/>
+</resources>

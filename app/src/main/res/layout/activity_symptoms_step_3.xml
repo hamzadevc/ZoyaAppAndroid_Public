@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.grappetite.zoya.activities.SymptomsStep1Activity">
+
+    <include layout="@layout/include_toolbar_blue" />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp">
+
+            <RelativeLayout
+                android:id="@+id/r_ll_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.erraticsolutions.framework.views.CustomTextView
+                        style="@style/TextView.SymptomsTitle.Pink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STEP 3" />
+
+                    <com.erraticsolutions.framework.views.CustomTextView
+                        style="@style/TextView.SymptomsTitle.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose the Symptoms" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dots_diameter"
+                        android:layout_height="@dimen/dots_diameter"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/s_circle_stroke_pink_transparent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dots_diameter"
+                        android:layout_height="@dimen/dots_diameter"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/s_circle_stroke_pink_transparent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dots_diameter"
+                        android:layout_height="@dimen/dots_diameter"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/s_circle_fill_pink" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dots_diameter"
+                        android:layout_height="@dimen/dots_diameter"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/s_circle_stroke_pink_transparent" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/temp_female_head_front" />
+
+            />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                style="@style/TextView.SymptomsTitle.Pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Multiple selections can be made" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Forearm (FLOXOR) Symptoms"
+                android:textColor="@color/blue_txt_dark"
+                android:textSize="16sp"
+                app:cfont="@string/font_semiBold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="65dp"
+            tools:listitem="@layout/eachview_symptoms" />
+    </LinearLayout>
+
+    <com.erraticsolutions.framework.views.CustomButton
+        android:id="@+id/btn_next"
+        style="@style/Button.Login.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/s_round_pink"
+        android:minWidth="100dp"
+        android:text="Next" />
+
+    <com.grappetite.zoya.views.ConnectionInfoView style="@style/ConnectionInfoView" />
+</RelativeLayout>

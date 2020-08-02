@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingLeft="30dp"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:id="@+id/covidCentreClick"
+            android:paddingBottom="10dp">
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Abdul Baki"
+                android:textColor="@color/blue_txt_light_4"
+                android:textSize="15sp"
+                app:cfont="@string/font_semiBold" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_specilization"
+                style="@style/TextView.FinderDesc"
+                android:layout_marginTop="10dp"
+                android:text="Dermatologist" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_hospital"
+                style="@style/TextView.FinderDesc"
+                android:text="Islamabad Skin Specilist" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_address"
+                style="@style/TextView.FinderDesc"
+                android:text="29-30 Taj Mahal Plaza" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_phone_number"
+                style="@style/TextView.FinderDesc"
+                android:text="+92313555555" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.erraticsolutions.framework.views.CustomButton
+                    style="@style/Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/s_round_blue"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Locate on map"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    app:cfont="@string/font_semiBold" />
+
+                <com.erraticsolutions.framework.views.CustomButton
+                    android:id="@+id/btn_dialer"
+                    style="@style/Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/s_round_blue"
+                    android:focusable="false"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Contact No"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    app:cfont="@string/font_semiBold" />
+
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="end"-->
+                <!--                    android:clipToPadding="false"-->
+                <!--                    android:gravity="right|center"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <com.erraticsolutions.framework.views.CustomTextView-->
+                <!--                        android:id="@+id/tv_rating"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Not rated yet"-->
+                <!--                        android:textColor="@color/blue_txt_light_4"-->
+                <!--                        android:textSize="12sp"-->
+                <!--                        app:cfont="@string/font_semiBold" />-->
+
+                <!--                    <RatingBar-->
+                <!--                        android:id="@+id/rb_rating"-->
+                <!--                        style="@style/Widget.AppCompat.RatingBar.Small"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:max="5"-->
+                <!--                        android:rating="0"-->
+                <!--                        android:stepSize="0.1"-->
+                <!--                        android:isIndicator="true"/>-->
+
+                <!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        style="@style/DividerHorizontal"
+        android:layout_gravity="bottom" />
+</FrameLayout>

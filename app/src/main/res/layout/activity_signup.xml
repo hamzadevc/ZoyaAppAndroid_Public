@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.grappetite.zoya.activities.SignupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/root"
+            android:padding="30dp">
+
+            <ImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/camera_signup"/>
+
+            <com.erraticsolutions.framework.views.CustomEditText
+                android:id="@+id/et_name"
+                style="@style/EditText.Login.SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="Enter your name"
+                android:inputType="textCapWords" />
+
+            <com.erraticsolutions.framework.views.CustomEditText
+                android:id="@+id/et_email"
+                style="@style/EditText.Login.SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email addresss"
+                android:inputType="textEmailAddress" />
+
+
+            <com.erraticsolutions.framework.views.CustomEditText
+                android:id="@+id/et_password"
+                style="@style/EditText.Login.SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="******"
+                android:inputType="textPassword" />
+
+            <com.erraticsolutions.framework.views.CustomEditText
+                android:id="@+id/et_confirm_password"
+                style="@style/EditText.Login.SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="******"
+                android:inputType="textPassword" />
+
+
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                style="@style/TextView.SignUpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/s_round_stroke_blue_transparent_thin"
+                    android:drawableLeft="@drawable/ic_female_inactive"
+                    android:drawableStart="@drawable/ic_female_inactive"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Female"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"
+                    app:cfont="@string/font_semiBold" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/s_round_stroke_blue_transparent_thin"
+                    android:drawableLeft="@drawable/ic_male_inactive"
+                    android:drawableStart="@drawable/ic_male_inactive"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Male"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"
+                    app:cfont="@string/font_semiBold" />
+            </LinearLayout>
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                style="@style/TextView.SignUpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of birth"
+                android:textAllCaps="true" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_dob"
+                style="@style/EditText.Login.SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:drawableEnd="@drawable/v_carrot_down_blue_24"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/v_carrot_down_blue_24"
+                android:drawableStart="@drawable/ic_calendar"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="DD / MM / YY"
+                android:textSize="13sp" />
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                style="@style/TextView.SignUpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marital status"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_single"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/s_round_stroke_blue_transparent_thin"
+                    android:padding="10dp"
+                    android:text="Single"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"
+                    app:cfont="@string/font_semiBold" />
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    android:id="@+id/tv_married"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/s_round_stroke_blue_transparent_thin"
+                    android:padding="10dp"
+                    android:text="Married"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"
+                    app:cfont="@string/font_semiBold" />
+            </LinearLayout>
+
+<!--            <com.erraticsolutions.framework.views.CustomCheckBox-->
+<!--                android:id="@+id/cb_terms_and_conditions"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="Terms and conditions"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/blue"-->
+<!--                android:textSize="13sp"-->
+<!--                android:theme="@style/CheckboxBlue"-->
+<!--                app:cfont="@string/font_semiBold" />-->
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_terms_and_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="terms &amp; conditions"
+                android:textAllCaps="true"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                app:cfont="@string/font_semiBold" />
+
+
+            <com.erraticsolutions.framework.views.CustomButton
+                android:id="@+id/btn_signup"
+                style="@style/Button.Login.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/s_round_pink"
+                android:drawableLeft="@drawable/ic_double_arrow"
+                android:drawableStart="@drawable/ic_double_arrow"
+                android:paddingEnd="30dp"
+                android:paddingLeft="27dp"
+                android:paddingRight="30dp"
+                android:paddingStart="27dp"
+                android:text="SignUp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Toolbar.Signup" />
+
+</FrameLayout>

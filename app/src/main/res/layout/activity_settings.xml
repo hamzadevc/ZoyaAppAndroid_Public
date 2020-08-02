@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.SettingsActivity">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/iv_profile_pic"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profile_pic_placeholder"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <com.erraticsolutions.framework.views.CustomTextView
+                        android:id="@+id/tv_profile_name"
+                        style="@style/TextView"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zoya Khan"/>
+                    <com.erraticsolutions.framework.views.CustomTextView
+                        android:id="@+id/tv_email"
+                        style="@style/TextView"
+                        android:textColor="@color/gray_txt"
+                        android:textSize="11.5sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="zoya@gmail.com"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/s_round_gray_2">
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:id="@+id/tv_edit_profile"/>
+
+                <View style="@style/DividerHorizontal"/>
+
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:id="@+id/tv_change_password"/>
+
+                <View android:id="@+id/v_divider_change_password" style="@style/DividerHorizontal"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.erraticsolutions.framework.views.CustomTextView
+                        style="@style/TextView.Profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notifications"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/s_notification"
+                        android:theme="@style/SwitchGreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"/>
+                </FrameLayout>
+                <View style="@style/DividerHorizontal"/>
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of use"
+                    android:id="@+id/tv_terms_of_use"/>
+                <View style="@style/DividerHorizontal"/>
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tutorial"
+                    android:id="@+id/tv_tutorial"/>
+                <View android:id="@+id/v_divider_promo" style="@style/DividerHorizontal"/>
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Have a referral code?"
+                    android:id="@+id/tv_promo"/>
+                <View style="@style/DividerHorizontal"/>
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rate this App"
+                    android:id="@+id/tv_rate_this_app"/>
+                <View style="@style/DividerHorizontal"/>
+                <com.erraticsolutions.framework.views.CustomTextView
+                    style="@style/TextView.Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Signout"
+                    android:id="@+id/tv_signout"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

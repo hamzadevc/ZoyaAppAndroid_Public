@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/tv_nothing_found"
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Nothing found"
+        android:textColor="@color/blue"
+        android:visibility="invisible" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/pw"
+        style="@style/ProgressWheel"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Internet connection fail."
+            android:textColor="@color/blue" />
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/btn_retry"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@color/blue"
+            android:text="Retry"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</FrameLayout>

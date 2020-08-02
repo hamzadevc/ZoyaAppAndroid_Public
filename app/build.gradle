@@ -1,0 +1,149 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        zoyaSigning {
+            storeFile file('/Users/hamzatahir/Downloads/ZOYA APP/hamza/keystore/zoya.jks')
+            keyAlias 'zoya'
+            keyPassword 'zoyakey'
+            storePassword 'zoyastore'
+        }
+    }
+    flavorDimensions "default"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.grappetite.zoya"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionName "1.0." + getVersionCodeByDate()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        signingConfig signingConfigs.zoyaSigning
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.zoyaSigning
+        }
+        debug {
+            signingConfig signingConfigs.zoyaSigning
+        }
+    }
+    productFlavors {
+        dev {
+            signingConfig signingConfigs.zoyaSigning
+        }
+        stage {
+            signingConfig signingConfigs.zoyaSigning
+        }
+        production {
+            versionCode 24
+            versionName "1.0.24"
+            signingConfig signingConfigs.zoyaSigning
+        }
+    }
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                output ->
+                    def flavor = "NA"
+                    if (variant.productFlavors.size() > 0)
+                        flavor = variant.productFlavors.get(0)
+
+                    outputFileName = "Zoya_${flavor.name}_${variant.buildType.name}_${getVersionCodeByDate()}.apk"
+            }
+    }
+    android.variantFilter { variant ->
+        def vName = variant.buildType.name
+        def flavor = variant.getFlavors().get(0).name
+        if (
+        (vName == 'debug' && flavor == 'production') ||
+                (vName == 'release' && flavor == 'dev') ||
+                (vName == 'release' && flavor == 'stage')) {
+            variant.setIgnore(true)
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':framework')
+    implementation project(':pickphotos')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
+    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.github.yalantis:ucrop:2.2.1'
+    implementation 'com.google.android:flexbox:0.3.1'
+    implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.8'
+    implementation 'jp.wasabeef:picasso-transformations:2.1.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-crash:16.2.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.firebaseui:firebase-ui-database:4.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-core:17.4.4'
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true
+    }
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+    implementation 'com.github.mumayank:AirLocation:1.3'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'androidx.arch.core:core-runtime:2.1.0'
+    implementation 'androidx.arch.core:core-common:2.1.0'
+    implementation 'com.jsibbold:zoomage:1.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    // Retrofit Scalars Converter
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
+    implementation 'com.github.dimitrovskif:SmartCache:0.2'
+    implementation 'com.applandeo:material-calendar-view:1.5.0'
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+
+}
+
+
+static def getVersionCodeByDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyMMdd')
+    return Integer.parseInt(formattedDate + "01")
+}
+
+
+apply plugin: 'com.google.gms.google-services'

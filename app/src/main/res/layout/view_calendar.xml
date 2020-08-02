@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_previous_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:src="@drawable/v_carrot_left_blue_24" />
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="September"
+            android:textAllCaps="true"
+            android:textColor="@color/blue"
+            android:textSize="16.5sp"
+            app:cfont="@string/font_semiBold"
+            android:id="@+id/tv_month"/>
+
+        <ImageView
+            android:id="@+id/iv_next_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="6dp"
+            android:src="@drawable/v_carrot_right_blue_24" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_calendar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date"/>
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date"/>
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date"/>
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date"/>
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+                <com.grappetite.zoya.views.SquareTextView style="@style/TextView.CalendarRow.Date" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

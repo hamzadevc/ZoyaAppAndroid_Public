@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/s_gray_highlight">
+    <com.erraticsolutions.framework.views.CustomTextView
+        style="@style/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:padding="10dp"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:text="Item One"
+        android:id="@+id/tv_title"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/v_carrot_right_blue_24"/>
+</FrameLayout>

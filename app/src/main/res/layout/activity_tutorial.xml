@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/blue"
+    tools:context="com.grappetite.zoya.activities.TutorialActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.Toolbar style="@style/Toolbar.WhiteText"
+        android:theme="@style/Toolbar.WhiteText"/>
+
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:padding="10dp"
+        android:src="@drawable/v_carrot_right_white_24" />
+
+    <ImageView
+        android:id="@+id/iv_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:padding="10dp"
+        android:src="@drawable/v_carrot_left_white_24" />
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/tv_skip"
+        style="@style/TextView.Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:padding="15dp"
+        android:text="Skip"
+        android:textSize="18sp" />
+</FrameLayout>

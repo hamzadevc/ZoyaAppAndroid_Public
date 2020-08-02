@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.grappetite.zoya.activities.FinderPlacesTypesActivity">
+
+    <include layout="@layout/include_toolbar_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb"
+        android:orientation="vertical">
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:id="@+id/tv_city"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_gps"
+            android:drawableLeft="@drawable/ic_gps"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="Select City"
+            android:textColor="@color/blue"
+            android:textSize="16.5sp" />
+
+
+        <com.erraticsolutions.framework.views.CustomButton
+            android:id="@+id/covid_center_btn"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/s_round_pink"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="COVID -19 Centres"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="30dp"
+            android:paddingLeft="30dp"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:text="What are you looking for?"
+            android:textColor="@color/gray_txt"
+            android:textSize="13sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/eachview_finder_places_type" />
+    </LinearLayout>
+
+    <com.grappetite.zoya.views.ConnectionInfoView
+        android:id="@+id/civ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

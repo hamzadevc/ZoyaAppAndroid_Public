@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.grappetite.zoya.activities.DoctorDetailListActivity">
+
+        <include layout="@layout/include_toolbar_blue"/>
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingStart="30dp"
+            android:paddingRight="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:textSize="16.5sp"
+            android:drawableLeft="@drawable/ic_gps"
+            android:drawableStart="@drawable/ic_gps"
+            android:drawablePadding="10dp"
+            android:text="Select City"
+            android:textColor="@color/blue"
+            android:id="@+id/tv_city"/>
+
+        <View style="@style/DividerHorizontal"/>
+
+        <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/eachview_doctor_detail"
+            app:setIndexBarColor="#00000000" />
+    </LinearLayout>
+    <com.grappetite.zoya.views.ConnectionInfoView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/civ"/>
+</FrameLayout>

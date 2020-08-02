@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="40dp"
+    android:paddingEnd="40dp"
+    android:paddingTop="20dp">
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/tv_message"
+        app:cfont="@string/font_regular"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_txt_dark"
+        android:textSize="14sp"
+        android:background="@drawable/s_round_10_solid_gray"
+        android:text="@string/dlt_news_feed_profile_txt"
+        android:layout_gravity="start"/>
+
+</FrameLayout>

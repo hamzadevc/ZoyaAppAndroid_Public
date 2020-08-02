@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.grappetite.zoya.activities.PeriodTrackerActivity">
+
+    <include layout="@layout/include_toolbar_blue"/>
+
+    <com.grappetite.zoya.views.CalendarView
+        android:id="@+id/v_calender"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.erraticsolutions.framework.views.CustomTextView
+                android:id="@+id/tv_days_remaining"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                tools:text="Next Period in 05 Days."
+                android:textSize="22.5sp"
+                app:cfont="@string/font_semiBold"
+                android:visibility="gone"/>
+
+            <com.erraticsolutions.framework.views.CustomButton
+                android:id="@+id/btn_set_tracker"
+                style="@style/Button.Login.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/s_round_pink"
+                android:drawableLeft="@drawable/ic_track"
+                android:drawableStart="@drawable/ic_track"
+                android:paddingEnd="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingStart="15dp"
+                android:text="Set Tracker" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

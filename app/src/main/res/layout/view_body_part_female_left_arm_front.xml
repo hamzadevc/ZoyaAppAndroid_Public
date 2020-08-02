@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body_part_hotspot_container"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_body_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/temp_female_left_arm_front" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_shoulder"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="55dp"
+            android:layout_height="65dp"
+            app:main_body_part_name="Arm"
+            app:sub_body_part_name="Shoulder" />
+
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_bicep"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="90dp"
+            android:rotation="40"
+            app:main_body_part_name="Arm"
+            app:sub_body_part_name="Upper Arm (Bicep)" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_armpit"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="70dp"
+            app:main_body_part_name="Arm"
+            app:sub_body_part_name="Armpit" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_flexor"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="165dp"
+            android:rotation="40"
+            app:main_body_part_name="Arm"
+            app:sub_body_part_name="Forearm (Flexor)"/>
+    </RelativeLayout>
+
+</FrameLayout>

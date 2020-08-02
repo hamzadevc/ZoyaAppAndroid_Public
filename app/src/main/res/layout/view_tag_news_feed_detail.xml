@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.erraticsolutions.framework.views.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/TextView.Tags.NewsFeedDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tag"
+        android:id="@+id/tv_tag"/>
+</FrameLayout>

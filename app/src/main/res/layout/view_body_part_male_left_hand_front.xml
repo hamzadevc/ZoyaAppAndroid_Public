@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_body_part_hotspot_container"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_body_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/temp_male_left_hand_front" />
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_fingers"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            app:main_body_part_name="Hand"
+            app:sub_body_part_name="Fingers"/>
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_palm"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="120dp"
+            app:main_body_part_name="Hand"
+            app:sub_body_part_name="Palm"/>
+
+        <com.grappetite.zoya.views.HotspotView
+            android:id="@+id/iv_wrist"
+            style="@style/SymptomsStep2HotSpot"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignBottom="@+id/iv_body_part"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            app:main_body_part_name="Hand"
+            app:sub_body_part_name="Wrist"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

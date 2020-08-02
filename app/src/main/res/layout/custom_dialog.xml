@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.erraticsolutions.framework.views.CustomTextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="RATE THIS PLACE"
+        android:textColor="@color/blue_txt_light_4"
+        android:textSize="14sp"
+        app:cfont="@string/font_semiBold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray" />
+
+    <RatingBar
+        android:id="@+id/rb_custom_rating"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:isIndicator="false"
+        android:max="5"
+        android:rating="3"
+        android:stepSize="1" />
+
+    <com.erraticsolutions.framework.views.CustomEditText
+        android:id="@+id/et_review"
+        style="@style/EditText.Login.SignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:hint="Review"
+        android:layout_marginBottom="10dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:minHeight="100dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:text="CANCEL"
+            android:textColor="@color/blue_txt_light_4"
+            android:textSize="14sp"
+            app:cfont="@string/font_semiBold" />
+
+        <com.erraticsolutions.framework.views.CustomTextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="SUBMIT"
+            android:textColor="@color/gray_txt_dark"
+            android:textSize="14sp"
+            app:cfont="@string/font_semiBold" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
